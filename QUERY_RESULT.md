@@ -91,3 +91,11 @@ SELECT COUNT(*) FROM films;
 ```sql
 SELECT genre, AVG(score) FROM films GROUP BY genre;
 ```
+
+# Extension 2
+## Add a column for directors in movies as a FK by using JOIN
+```sql
+SELECT *
+FROM films
+INNER JOIN directors ON films.directorid = directors."directorId";
+```
