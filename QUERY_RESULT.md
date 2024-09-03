@@ -99,3 +99,12 @@ SELECT *
 FROM films
 INNER JOIN directors ON films.directorid = directors."directorId";
 ```
+
+# Extension 3
+## Write a SQL SELECT statement that returns a lists of directors along with the number of films they have directed.
+```sql
+SELECT name, COUNT(films.directorid)
+FROM films
+INNER JOIN directors ON films.directorid = directors."directorId"
+GROUP BY (name);
+```
