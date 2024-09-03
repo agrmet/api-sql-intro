@@ -79,15 +79,15 @@ For the last query, you will need to research the LIKE keyword in postgres.
 ## Return the average film rating
 ### QUERY
 ```sql
-
+SELECT AVG(score) FROM films;
 ```
 ## Return the total number of films
 ### QUERY
 ```sql
-
+SELECT COUNT(*) FROM films;
 ```
 ## Return the average film rating by genre
 ### QUERY
 ```sql
-
+SELECT genre, AVG(score) FROM films GROUP BY genre;
 ```
